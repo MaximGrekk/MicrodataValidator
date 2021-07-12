@@ -1,11 +1,25 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 function InputForm() {
+
+  const [URL, setURL] = useState("");
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    setURL("");
+    console.log(URL)
+  }
+
   return (
     <div>
-        <form>
-            <input type="text" className="form-control m-auto my-2" style={{maxWidth: 400}} placeholder="Введите url страницы"/>
-            <button className="btn btn-info text-white">Проанализировать</button>
+        <form onSubmit={onSubmit}>
+            <input type="text"
+             className="form-control m-auto my-2"
+              style={{maxWidth: 400}}
+              placeholder="Введите url страницы"
+              onChange={(e) => setURL(e.target.value)}
+               />
+            <button type="submit" className="btn btn-info text-white">Проанализировать</button>
         </form>
     </div>
   );
