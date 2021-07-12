@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-function InputForm() {
+function InputURL() {
 
   const [URL, setURL] = useState("");
 
@@ -25,4 +25,4 @@ function InputForm() {
   );
 }
 
-export default InputForm;
+export default InputURL;
