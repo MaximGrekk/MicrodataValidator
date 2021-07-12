@@ -1,10 +1,10 @@
 import React from 'react'
 import InputURL from '../InputURL/InputURL'
 
-function CardForm() {
+function CardForm(props) {
   return (
     <div className="col-6 m-auto card p-3">
-      <InputURL />
+      <InputURL analyzer={props.analyzer}/>
     </div>
   );
 }
