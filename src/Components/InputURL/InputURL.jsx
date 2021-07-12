@@ -7,7 +7,7 @@ function InputURL(props) {
   const onSubmit = (e) => {
     e.preventDefault();
     props.analyzer(url)
-    setURL("");
+    
     
   }
 
