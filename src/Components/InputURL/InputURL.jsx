@@ -9,7 +9,7 @@ function InputURL(props) {
   };
 
   return (
-    <div>
+    <div className="col-6 m-auto card p-3">
       <form onSubmit={onSubmit}>
         <input
           type="text"

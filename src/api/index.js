@@ -7,7 +7,6 @@ const getHtml = (url) => {
 		body: JSON.stringify({url}),
 	})
 	.then(res => res.json())
-	.then(res => console.log(res))
 	.then(res => res.res)
     .then(res=>parser.parseFromString(res, 'text/html'))
     .then(console.log);

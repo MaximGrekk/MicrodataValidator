@@ -10,7 +10,7 @@ function App() {
     <div className="App text-center my-3">
       <h1>It is our microdata validator</h1>
       <CardForm analyzer={analyzer} />
-      <Result/>
+      {/* <Result/> */}
     </div>
   );
 }
