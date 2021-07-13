@@ -1,11 +1,13 @@
 import React, {useState} from 'react'
+import {Validator, types} from "../../validator"
 
 function TextareaLayout(props) {
 
   const [layoutText, setLayoutText] = useState('')
-
+  const parser = new DOMParser();
   const onSubmit = (e) => {
     e.preventDefault();
+    Validator(parser.parseFromString(layoutText, "text/html").body);
   };
 
   
@@ -15,7 +17,7 @@ function TextareaLayout(props) {
         <textarea className="form-control m-auto my-2" cols="30" rows="10" placeholder="Введите разметку" onChange={(e) => setLayoutText(e.target.value)}>
         
         </textarea>
-        {console.log(layoutText)}
+        {/* {console.log(layoutText)} */}
         <button type="submit" className="btn btn-info text-white" >
           Проанализировать
         </button>

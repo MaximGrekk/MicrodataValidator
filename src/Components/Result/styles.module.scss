@@ -1,0 +1,5 @@
+.tdSpan {
+    &:not(:last-child)::after {
+    content: ", ";
+  }
+}

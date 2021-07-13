@@ -9,6 +9,5 @@ const getHtml = (url) => {
 	.then(res => res.json())
 	.then(res => res.res)
     .then(res=>parser.parseFromString(res, 'text/html'))
-    .then(console.log);
 };
 export default getHtml
